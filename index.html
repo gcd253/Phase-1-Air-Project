@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,31 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
 <body>
 
 
     <h1 id="mainHeader">Live Flight Tracker</h1>
     <p id="airportCodeInstruct">Enter a valid airport code below:</p>
+   
 
 
+    <label id="cityCodeLabel">Select City For Airport Code
+        <select id="cityCodeSelect" class="" name="">
+            <option value="">Select One …</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="New York">New York</option>
+            <option value="Austin">Austin</option>
+        </select>
+    </label>
 
-    <form id= "init-airport-form" action="">
-        <input id= "initial-input" type="text">
-        <input id= "initial-btn" type="submit" value="Search">
+    <form id="init-airport-form" action=""> <br>
+        <input id="initial-input" type="text">
+        <input id="initial-btn" type="submit" value="Search">
 
     </form>
+    <span id="search-results-span" ></span>
 
-    
 </body>
+
 </html>
