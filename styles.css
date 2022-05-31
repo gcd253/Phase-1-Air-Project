@@ -1,0 +1,12 @@
+h1#mainHeader {
+    text-align: center;
+    padding-top: 20px;
+}
+
+p#airportCodeInstruct {
+    text-align: center;
+}
+
+form#form {
+    text-align: center;
+}
