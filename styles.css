@@ -3,10 +3,7 @@ h1#mainHeader {
     padding-top: 20px;
 }
 
-p#airportCodeInstruct {
+div#formDiv {
     text-align: center;
 }
 
-form#form {
-    text-align: center;
-}
