@@ -10,18 +10,14 @@ function departureLookUp() {
             .then(response => response.json())
             .then(departureData => {
                 (departureData)
-                console.log(departureData)
+                // console.log(departureData)
                 for (item of departureData.fidsData) {
-                let orderedList = document.createElement('ol')
-                orderedList.textContent = item.airlineCode + " " + item.airlineName + " " + item.flightNumber + " " + item.originAirportCode + " " + item.destinationAirportCode + " " + item.remarks + item.city + " " + item.currentTime + " " + item.currentGateDate;
-                console.log(orderedList)
-                resultSpan.append(orderedList)
+                    let orderedList = document.createElement('ol')
+                    orderedList.textContent = /*item.airlineCode + " " + */ item.airlineName + " " + item.flightNumber + " " + item.originAirportCode + "/" + item.destinationAirportCode + " " + item.remarks + " " + item.city + " " + item.currentTime + " " + item.currentGateDate;
+                    resultSpan.append(orderedList)
 
                 }
             })
-
-
-
     })
 }
 
