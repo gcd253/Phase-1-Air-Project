@@ -1,9 +1,49 @@
 h1#mainHeader {
     text-align: center;
     padding-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-div#formDiv {
-    text-align: center;
+
+
+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 50vh; 
+    overflow: auto;
+    font-family: Arial;
+    margin-top: 100px;
 }
 
+label{
+    position: relative;
+    text-align: right;
+    font-family: Arial;
+}
+
+.cityCodeDiv{
+   position: relative;
+   float: right; 
+   height:100px;
+   width: 150px;
+   font-family: Arial;
+   top: -75px;
+}
+
+p{
+    font-family: Arial;
+}
+
+ol:hover{
+    width:70px;
+    height:-10px;
+ 
+}
+
+
+body{
+    margin-left: 20px;
+    
+}

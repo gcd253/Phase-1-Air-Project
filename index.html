@@ -9,32 +9,34 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-
-<body>
+<body style="background: url(https://cdn.mos.cms.futurecdn.net/Tpwmmfo3CiAJvwd4vXGzvn.jpg); background-size: 100% 100%;">
 
 
     <h1 id="mainHeader">Live Flight Tracker</h1>
     <p id="airportCodeInstruct">Enter a valid airport code below:</p>
-   
 
 
-    <label id="cityCodeLabel">Don't know your airport code? 
-        <select id="cityCodeSelect" class="" name="">
-            <option value="">Select One …</option>
-            <option value="Los Angeles">Los Angeles</option>
-            <option value="New York">New York</option>
-            <option value="Austin">Austin</option>
-        </select>
-    </label>
+
 
     <form id="init-airport-form" action=""> <br>
         <input id="initial-input" type="text">
         <input id="initial-btn" type="submit" value="Search">
-
     </form>
-    <span id="search-results-span" ></span>
 
-    
+    <div class="cityCodeDiv">
+        <label id="cityCodeLabel">Don't know your airport code?
+            <select id="cityCodeSelect" class="" name="">
+                <option value="">Select One …</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="New York">New York</option>
+                <option value="Austin">Austin</option>
+            </select>
+        </label>
+    </div>
+
+    <span id="search-results-span"></span>
+
+
 </body>
 
 </html>
