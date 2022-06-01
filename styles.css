@@ -5,11 +5,9 @@ h1#mainHeader {
 }
 
 
-
-span {
+div {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: 0 auto;
     height: 50vh; 
     overflow: auto;
@@ -19,7 +17,6 @@ span {
 
 label{
     position: relative;
-    text-align: right;
     font-family: Arial;
 }
 
@@ -39,11 +36,16 @@ p{
 ol:hover{
     width:70px;
     height:-10px;
- 
+    opacity: 50%;
+    color: blueviolet;
 }
 
 
 body{
-    margin-left: 20px;
+    margin-left: 5%;
     
+}
+
+h3{
+    font-family: Arial;
 }

@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body style="background: url(https://cdn.mos.cms.futurecdn.net/Tpwmmfo3CiAJvwd4vXGzvn.jpg); background-size: 100% 100%;">
+
+<body
+    style="background: url(https://cdn.mos.cms.futurecdn.net/Tpwmmfo3CiAJvwd4vXGzvn.jpg); background-size: 100% 100%;">
 
 
     <h1 id="mainHeader">Live Flight Tracker</h1>
@@ -23,20 +25,37 @@
         <input id="initial-btn" type="submit" value="Search">
     </form>
 
+
     <div class="cityCodeDiv">
-        <label id="cityCodeLabel">Don't know your airport code?
-            <select id="cityCodeSelect" class="" name="">
-                <option value="">Select One …</option>
-                <option value="Los Angeles">Los Angeles</option>
-                <option value="New York">New York</option>
-                <option value="Austin">Austin</option>
-            </select>
-        </label>
+        <label for="cityCode"></label>
+        <input type="text" class="form-control" id="cityInput" aria-describedby="cityCodeGen"
+            placeholder="Enter City For Airport code">
     </div>
+    <div id="search-results-div"></div>
 
-    <span id="search-results-span"></span>
+    
 
 
+    <form id="filter-by-airline" action="/action_page.php">
+        <label for="cars">Filter search by airline</label>
+        <select name="cars" id="airline-select">
+          <!-- <optgroup label="Swedish Cars"> -->
+            <option id="aa-option" value="American Airlines">American Airlines</option>
+            <option value="saab">Saab</option>
+          <!-- </optgroup> -->
+          <optgroup label="German Cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </optgroup>
+        </select>
+        <br><br>
+        <input id="user-airline-choice" type="submit" value="Submit">
+      </form>
+       
+      </body>
+      </html>
+      
+    
 </body>
 
 </html>
