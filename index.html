@@ -25,14 +25,13 @@
 
     <div class="cityCodeDiv">
         <label id="cityCodeLabel">Don't know your airport code?
-            <select id="cityCodeSelect" class="" name="">
-                <option value="">Select One …</option>
-                <option value="Los Angeles">Los Angeles</option>
-                <option value="New York">New York</option>
-                <option value="Austin">Austin</option>
-            </select>
+            <form id="cityCodeLookup">
+                <input id="look-up-box" type="text">
+                <input type="submit" id="airportSubmit" class="submit-button" value="Search">
+            </form>
         </label>
     </div>
+    <div id="test"></div>
 
     <span id="search-results-span"></span>
 

@@ -42,11 +42,45 @@ createCityCodeList()
 
 departureLookUp()
 
+let cityForm = document.getElementById('cityCodeLookup')
+    let citySelect = document.getElementById('look-up-box')
+    let testDiv = document.getElementById('test')
+    
+
 function findAirportCode() {
-    let cityLabel = document.getElementById('cityCodeLabel')
-    let citySelect = document.getElementById('cityCodeSelect')
+    
+    cityForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        const searchTerm = citySelect.value
+        let url = "https://autocomplete.travelpayouts.com/places2?locale=en&types[]=code&types[]=city&types[]=country_name&term=" + searchTerm
+      
+        fetch(url)
+        .then(response => response.json())
+        .then(cityData => console.log(cityData))
+        
+      
+        //testDiv.innerText = 
+    })
+
+
 
 }
 
 
+findAirportCode()
 
+
+// function autocompleteSearch() {
+//     let cityForm = document.getElementById('cityCodeLookup')
+//     let citySelect = document.getElementById('look-up-box')
+//     const searchTerm = citySelect.value
+
+//     cityForm.addEventListener('keypress', () => {
+//         fetch(`https://autocomplete.travelpayouts.com/places2?locale=en&types[]=code&types[]=city&term=${searchTerm}`)
+//         .then(response => response.json())
+//         .then(cityData => testDiv.innerText = cityData[0].code)
+//     })
+// }
+
+// autocompleteSearch()
