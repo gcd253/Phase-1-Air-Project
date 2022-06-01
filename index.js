@@ -14,6 +14,7 @@ function departureLookUp() {
                 // console.log(departureData)
                 for (item of departureData.fidsData) {
                     let orderedList = document.createElement('ol')
+                    orderedList.className = item.airlineName
                     orderedList.textContent = /*item.airlineCode + " " + */ item.airlineName + " " + item.flightNumber + " " + item.originAirportCode + "/" + item.destinationAirportCode + " " + item.remarks + " " + item.city + " " + item.currentTime + " " + item.currentGateDate;
                     resultSpan.append(orderedList)
 
@@ -22,65 +23,30 @@ function departureLookUp() {
 
     })
 }
-const citiesAndCodes = new Set();
-
-function createCityCodeList() {
-
-fetch('https://api.flightstats.com/flex/fids/rest/v1/json/jfk/departures?appId=9ca90017&appKey=430095eb345366c16e16381b17c69111&requestedFields=city%2CdestinationAirportCode&lateMinutes=15&useRunwayTimes=false&excludeCargoOnlyFlights=false')
-.then((response) => response.json())
-.then(cityAndCodeJson => {
-    for(const item of cityAndCodeJson.fidsData)
-    citiesAndCodes.add(item.city + " - " + item.destinationAirportCode)
-    //console.log(citiesAndCodes)
-})
-
-}
-
-createCityCodeList()
-
-
 
 departureLookUp()
 
 let cityForm = document.getElementById('cityCodeLookup')
-    let citySelect = document.getElementById('look-up-box')
-    let testDiv = document.getElementById('test')
+let citySelect = document.getElementById('look-up-box')
+let testDiv = document.getElementById('test')
     
 
 function findAirportCode() {
-    
+    // prevent refresh on submit
     cityForm.addEventListener('submit', (e) => {
         e.preventDefault()
 
+        // defining variables
         const searchTerm = citySelect.value
         let url = "https://autocomplete.travelpayouts.com/places2?locale=en&types[]=code&types[]=city&types[]=country_name&term=" + searchTerm
-      
+
+        // fetch request to obtain airport code
         fetch(url)
         .then(response => response.json())
-        .then(cityData => console.log(cityData))
-        
-      
-        //testDiv.innerText = 
+        .then((cityData) => {
+            testDiv.innerText = `${cityData[0].name} -- ${cityData[0].code}`
+        })
     })
-
-
-
 }
 
-
 findAirportCode()
-
-
-// function autocompleteSearch() {
-//     let cityForm = document.getElementById('cityCodeLookup')
-//     let citySelect = document.getElementById('look-up-box')
-//     const searchTerm = citySelect.value
-
-//     cityForm.addEventListener('keypress', () => {
-//         fetch(`https://autocomplete.travelpayouts.com/places2?locale=en&types[]=code&types[]=city&term=${searchTerm}`)
-//         .then(response => response.json())
-//         .then(cityData => testDiv.innerText = cityData[0].code)
-//     })
-// }
-
-// autocompleteSearch()
