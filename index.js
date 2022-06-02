@@ -50,60 +50,31 @@ function departureLookUp() {
 
 departureLookUp()
 
+// some global variables
 const aa = document.getElementById('aa-option')
 const searchDiv = document.querySelector('#search-results-div')
 const filterByAirlineForm = document.getElementById('filter-by-airline')
 const selectAirline = document.getElementById('airline-select')
 
+
 selectAirline.addEventListener('change', filterAirline)
 
 
-function areValuesEqual() {
-    while (selectAirline === aa) {
-
-    }
-}
-
-
+// an attempt to filter the displayed data by airline
 function filterAirline() {
-    allFlightData.filter(areValuesEqual)
+    const filtered = [allFlightData.filter((item) => {
+        return item.airlineName === selectAirline.value
+     })]
+     allFlightData = filtered
+     console.log(allFlightData)
 }
 
-// while (resultDiv.firstChild) {
-//     resultDiv.removeChild(resultDiv.firstChild);
-// }
-
-
-
-
-
-
-const citiesAndCodes = new Set();
-
-function createCityCodeList() {
-
-    // fetch('https://api.flightstats.com/flex/fids/rest/v1/json/jfk/departures?appId=9ca90017&appKey=430095eb345366c16e16381b17c69111&requestedFields=city%2CdestinationAirportCode&lateMinutes=15&useRunwayTimes=false&excludeCargoOnlyFlights=false')
-    //     .then((response) => response.json())
-    //     .then(cityAndCodeJson => {
-    //         for (const item of cityAndCodeJson.fidsData)
-    //             citiesAndCodes.add(item.city + " - " + item.destinationAirportCode)
-    //         //console.log(citiesAndCodes)
-    //     })
-
-}
-
-createCityCodeList()
-
-
-
-
-
-
+// global variables
 let cityForm = document.getElementById('cityCodeLookup')
 let citySelect = document.getElementById('look-up-box')
 let testDiv = document.getElementById('test')
     
-
+// this function allows user to find an airport IATA code by city
 function findAirportCode() {
     // prevent refresh on submit
     cityForm.addEventListener('submit', (e) => {
@@ -117,7 +88,7 @@ function findAirportCode() {
         fetch(url)
         .then(response => response.json())
         .then((cityData) => {
-            testDiv.innerText = `${cityData[0].name} -- ${cityData[0].code}`
+            citySelect.value = `${cityData[0].name} -- ${cityData[0].code}`
         })
     })
 }
