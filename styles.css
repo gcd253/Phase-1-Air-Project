@@ -1,6 +1,8 @@
 html{
     width: 100%;
 }
+
+
 body{
 
 width: 100vw;
@@ -26,7 +28,7 @@ margin: 0px;
     align-items: center;
     margin: 0 auto;
     height: 50vh; 
-    /* overflow: auto; */
+    overflow: auto;
     font-family: Arial;
     margin-top: 85px;
     
@@ -53,10 +55,13 @@ p{
 
 ol{
     opacity: 75%;
+    font-size: x-large;
+    
 }
 
 ol:hover{
     opacity: 100%;
+
 }
 
 
@@ -99,9 +104,9 @@ h3{
     margin: 4.16%;
 
     color: rgb(255, 255, 255);
-    font-weight: 900;
+    /* font-weight: 900; */
     font-size: large;
-    
+    font-family: Arial;
 }
 
 #look-up-box{
