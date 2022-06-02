@@ -1,4 +1,4 @@
-resultSpan = document.getElementById('search-results-div')
+resultDiv = document.getElementById('search-results-div')
 let allFlightData = []
 
 
@@ -8,8 +8,8 @@ function departureLookUp() {
         e.preventDefault()
         const formInput = document.getElementById('initial-input')
         const airportCode = formInput.value;
-        while (resultSpan.firstChild) {
-            resultSpan.removeChild(resultSpan.firstChild);
+        while (resultDiv.firstChild) {
+            resultDiv.removeChild(resultDiv.firstChild);
         }
 
         fetch(`https://api.flightstats.com/flex/fids/rest/v1/json/${airportCode}/departures?appId=9ca90017&appKey=430095eb345366c16e16381b17c69111&requestedFields=airlineCode%2CflightNumber%2Ccity%2CcurrentTime%2Cremarks%2CoriginAirportCode%2CdestinationAirportCode%2CairlineName%2CcurrentGateDate&lateMinutes=15&useRunwayTimes=false&excludeCargoOnlyFlights=false`)
@@ -18,12 +18,14 @@ function departureLookUp() {
             .then(departureData => {
                 (departureData)
                 // console.log(departureData)
+
                 allFlightData = departureData
+
                 for (let item of departureData.fidsData) {
                     let orderedList = document.createElement('ol')
                     orderedList.className = item.airlineName
                     orderedList.textContent = item.airlineName + " " + item.flightNumber
-                    resultSpan.append(orderedList)
+                    resultDiv.append(orderedList)
 
                     let restOfInfo = item.airlineCode + " " + item.originAirportCode + " " + item.destinationAirportCode + " " + item.city + " " + item.currentTime + " " + item.currentGateDate
 
@@ -53,14 +55,22 @@ const selectAirline = document.getElementById('airline-select')
 selectAirline.addEventListener('change', filterAirline)
 
 
-function areValuesEqual(){
-    allFlightData.class === 'American Airlines'
-console.log(allFlightData)
+function areValuesEqual() {
+    while (selectAirline === aa) {
+
+    }
 }
 
-function filterAirline(){
-allFlightData.filter(areValuesEqual)
+
+function filterAirline() {
+    allFlightData.filter(areValuesEqual)
 }
+
+// while (resultDiv.firstChild) {
+//     resultDiv.removeChild(resultDiv.firstChild);
+// }
+
+
 
 
 

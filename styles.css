@@ -33,16 +33,17 @@ p{
     font-family: Arial;
 }
 
+ol{
+    opacity: 75%;
+}
+
 ol:hover{
-    width:70px;
-    height:-10px;
-    opacity: 50%;
-    color: blueviolet;
+    opacity: 100%;
 }
 
 
 body{
-    margin-left: 5%;
+    margin-left: 3%;
     
 }
 
