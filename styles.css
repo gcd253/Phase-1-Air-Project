@@ -1,51 +1,120 @@
-h1#mainHeader {
-    text-align: center;
-    padding-top: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+html{
+    width: 100%;
 }
 
 
+body{
 
-span {
+width: 100vw;
+height: 100vh;
+
+    background-image: url('https://cdn.mos.cms.futurecdn.net/Tpwmmfo3CiAJvwd4vXGzvn.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+margin: 0px;
+    
+}
+
+#mainHeader {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+
+#search-results-div {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: 0 auto;
     height: 50vh; 
     overflow: auto;
     font-family: Arial;
-    margin-top: 100px;
+    margin-top: 85px;
+    
 }
 
-label{
+/* label{
     position: relative;
-    text-align: right;
     font-family: Arial;
-}
+} */
 
 .cityCodeDiv{
    position: relative;
-   float: right; 
+
    height:100px;
    width: 150px;
    font-family: Arial;
    top: -75px;
+   background-color: aqua;
 }
 
 p{
     font-family: Arial;
 }
 
+ol{
+    opacity: 75%;
+    font-size: x-large;
+    
+}
+
 ol:hover{
-    width:70px;
-    height:-10px;
- 
+    opacity: 100%;
+
 }
 
 
-body{
-    margin-left: 20px;
-    
+
+h3{
+    font-family: Arial;
+}
+
+#cityCodelabel{
+    position: relative;
+    width: 20%;
+}
+
+.input-container{
+
+    width: 100%;
+
+
+    display: inline-block;
+}
+
+#init-airport-form{
+    width: 25%;
+    float: left;
+ 
+    margin: 4.16%;
+}
+
+#cityCodeLookup{
+    width: 25%;
+    float: left;
+    margin: 4.16%;
+}
+
+#filter-by-airline{
+
+    width: 25%;
+    float: left;
+  
+    margin: 4.16%;
+
+    color: rgb(255, 255, 255);
+    /* font-weight: 900; */
+    font-size: large;
+    font-family: Arial;
+}
+
+#look-up-box{
+    width: 80%;
+}
+
+#initial-input{
+    width: 80%;
 }
 
 div#test {

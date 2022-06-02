@@ -9,31 +9,85 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body style="background: url(https://cdn.mos.cms.futurecdn.net/Tpwmmfo3CiAJvwd4vXGzvn.jpg); background-size: 100% 100%;">
+
+<body>
 
 
     <h1 id="mainHeader">Live Flight Tracker</h1>
-    <p id="airportCodeInstruct">Enter a valid airport code below:</p>
 
 
+    <div class="input-container">
 
 
-    <form id="init-airport-form" action=""> <br>
-        <input id="initial-input" type="text">
-        <input id="initial-btn" type="submit" value="Search">
-    </form>
+        <form id="init-airport-form">
+            <input placeholder="Enter valid airport code " id="initial-input" type="text">
+            <input type="submit" id="initial-btn" class="submit-button" value="Search">
+        </form>
 
-    <div class="cityCodeDiv">
-        <label id="cityCodeLabel">Don't know your airport code?
-            <form id="cityCodeLookup">
-                <input id="look-up-box" type="text">
-                <input type="submit" id="airportSubmit" class="submit-button" value="Search">
-            </form>
-        </label>
+        <form id="cityCodeLookup">
+            <input placeholder="Enter your city for airport code " id="look-up-box" type="text">
+            <input type="submit" id="airportSubmit" class="submit-button" value="Search">
+        </form>
+
+        <form id="filter-by-airline" action="/action_page.php">
+            <label id="filter-text" for="">Filter search by airline</label>
+            <select name="airlines" id="airline-select">
+                <!-- <optgroup label="Swedish Cars"> -->
+                <option id="aa-option" value="American Airlines">American Airlines</option>
+                <option id="dl-option" value="Delta Air lines">Delta Air lines</option>
+                <option id="ua-option" value="United Airlines">United Airlines</option>
+                <option id="dl-option" value="JetBlue Airways">JetBlue Airways</option>
+                <option id="aa-option" value="Alaska Airlines">Alaska Airlines</option>
+                <option id="so-option" value="Spirit Airlines">Spirit Airlines</option>
+                <option id="sw-option" value="Southwest Airlines">Southwest Airlines</option>
+                <option id="ha-option" value="Hawaiian Airlines">Hawaiian Airlines</option>
+                <!-- </optgroup> -->
+                <optgroup label="International Airlines">
+                    <option id="aeroM-option" value="Aeromexico"> Aeromexico</option>
+                    <option id="aNZ-option" value="Air New Zealand"> Air New Zealand</option>
+                    <option id="britA-option" value="British Airways"> British Airways</option>
+                    <option id="av-option" value="SA Avianca"> SA Avianca</option>
+                    <option id="cath-option" value="Cathay Pacific"> Cathay Pacific</option>
+                    <option id="qat-option" value="Qatar Airways"> Qatar Airways</option>
+                    <option id="kor-option" value="Korean Air"> Korean Air</option>
+                    <option id="cA-option" value="China Airlines"> WestJet</option>
+                    <option id="wJ-option" value="WestJet"> WestJet</option>
+                    <option id="virA-option" value="Virgin Australia">Virgin Australia</option>
+                    <option id="jal-option" value="JAL">JAL</option>
+                    <option id="ibe-option" value="Iberia">Iberia</option>
+                    <option id="malA-option" value="Malaysia Airlines">Malaysia Airlines</option>
+                    <option id="itaA-option" value="ITA Airways">ITA Airways</option>
+                    <option id="klm-option" value="KLM">KLM</option>
+                    <option id="rAM-option" value="Royal Air Maroc">Royal Air Maroc</option>
+                    <option id="aEur-option" value="Air Europa">Air Europa</option>
+                    <option id="fin-option" value="Finnair">Finnair</option>
+                    <option id="gAir-option" value="Gulf Air">Gulf Air</option>
+                    <option id="qua-option" value="Quantas">Quantas</option>
+                    <option id="aFr-option" value="Air France">Air France</option>
+                    <option id="lat-option" value="LATAM Airlines">LATAM Airlines</option>
+                    <option id="luf-option" value="Lufthansa">Lufthansa</option>
+                    <option id="sas-option" value="SAS">SAS</option>
+                    <option id="ice-option" value="Icelandair">Icelandair</option>
+            </select>
+            <br><br>
+        
+        </form>
+
     </div>
-    <div id="test"></div>
 
-    <span id="search-results-span"></span>
+    <div id="test"></div>
+    
+    <div id="search-results-div"></div>
+
+
+
+
+
+
+</body>
+
+
+</html>
 
 
 </body>
