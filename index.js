@@ -59,6 +59,8 @@ const selectAirline = document.getElementById('airline-select')
 
 selectAirline.addEventListener('change', filterAirline)
 
+//const olItems = document.querySelectorAll["div ol"]
+
 
 // an attempt to filter the displayed data by airline
 function filterAirline() {
@@ -66,7 +68,8 @@ function filterAirline() {
         return item.airlineName === selectAirline.value
      })]
      allFlightData = filtered
-     console.log(allFlightData)
+     //console.log(allFlightData)
+     
 }
 
 // global variables
