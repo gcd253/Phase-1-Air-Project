@@ -22,26 +22,7 @@ function departureLookUp() {
 
                 allFlightData = departureData
 
-                for (let item of departureData) {
-                    let orderedList = document.createElement('ol')
-                    orderedList.className = item.airlineName
-
-                    orderedList.textContent = item.airlineName + " " + item.flightNumber
-                    resultDiv.append(orderedList)
-
-                    let restOfInfo = item.airlineCode + " " + item.originAirportCode + " " + item.destinationAirportCode + " " + item.city + " " + item.currentTime + " " + item.currentGateDate
-
-                    orderedList.addEventListener('mouseover', () => {
-                        console.log(restOfInfo)
-                        orderedList.append(restOfInfo)
-
-                    })
-
-
-                    orderedList.addEventListener('mouseout', () => {
-                        orderedList.textContent = item.airlineName + " " + item.flightNumber
-                    })
-                }
+                renderData(departureData)
 
             })
 
@@ -63,20 +44,19 @@ selectAirline.addEventListener('change', filterAirline)
 
 // an attempt to filter the displayed data by airline
 function filterAirline() {
-    const filtered = [allFlightData.filter((item) => {
+    const filtered = allFlightData.filter((item) => {
         return item.airlineName === selectAirline.value
-     })]
-     allFlightData = filtered
+     })
 
 
-     const collection = document.querySelectorAll('ol');
+    const collection = document.querySelectorAll('ol');
 
     for (let i = 0; i < collection.length; i++) {
         collection[i].remove();
     }
-     
-    //  console.log(allFlightData)
-    alert('Feature not yet implemented!')
+    renderData(filtered)     
+    console.log(filtered)
+
 }
 
 
@@ -105,3 +85,25 @@ function findAirportCode() {
 }
 
 findAirportCode()
+
+function renderData(filteredData) {
+    for (let item of filteredData) {
+        let orderedList = document.createElement('ol')
+        orderedList.className = item.airlineName
+
+        orderedList.textContent = item.airlineName + " " + item.flightNumber
+        resultDiv.append(orderedList)
+
+        let restOfInfo = item.airlineCode + " " + item.originAirportCode + " " + item.destinationAirportCode + " " + item.city + " " + item.currentTime + " " + item.currentGateDate
+
+        orderedList.addEventListener('mouseover', () => {
+            console.log(restOfInfo)
+            orderedList.append(restOfInfo)
+
+        })
+
+        orderedList.addEventListener('mouseout', () => {
+            orderedList.textContent = item.airlineName + " " + item.flightNumber
+        })
+    }
+}
