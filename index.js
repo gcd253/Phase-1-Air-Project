@@ -59,7 +59,6 @@ const selectAirline = document.getElementById('airline-select')
 
 selectAirline.addEventListener('change', filterAirline)
 
-//const olItems = document.querySelectorAll["div ol"]
 
 
 // an attempt to filter the displayed data by airline
@@ -68,12 +67,18 @@ function filterAirline() {
         return item.airlineName === selectAirline.value
      })]
      allFlightData = filtered
-     //console.log(allFlightData)
-     
-     console.log(allFlightData)
-     alert('Feature not yet implemented!')
 
+
+     const collection = document.querySelectorAll('ol');
+
+    for (let i = 0; i < collection.length; i++) {
+        collection[i].remove();
+    }
+     
+    //  console.log(allFlightData)
+    alert('Feature not yet implemented!')
 }
+
 
 // global variables
 let cityForm = document.getElementById('cityCodeLookup')
@@ -100,5 +105,3 @@ function findAirportCode() {
 }
 
 findAirportCode()
-
-
