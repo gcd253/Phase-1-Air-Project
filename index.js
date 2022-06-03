@@ -67,6 +67,7 @@ function filterAirline() {
      })]
      allFlightData = filtered
      console.log(allFlightData)
+     alert('Feature not yet implemented!')
 }
 
 // global variables
