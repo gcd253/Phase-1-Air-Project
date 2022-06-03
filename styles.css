@@ -1,25 +1,29 @@
-html{
+html {
     width: 100%;
 }
 
 
-body{
+body {
 
-width: 100vw;
-height: 100vh;
+    width: 100vw;
+    height: 100vh;
 
     background-image: url('https://cdn.mos.cms.futurecdn.net/Tpwmmfo3CiAJvwd4vXGzvn.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-margin: 0px;
-    
+    margin: 0px;
+
 }
 
 #mainHeader {
     text-align: center;
     padding-top: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: rgb(3, 34, 61);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: aliceblue;
 }
 
 
@@ -27,11 +31,11 @@ margin: 0px;
     display: flex;
     align-items: center;
     margin: 0 auto;
-    height: 50vh; 
+    height: 50vh;
     overflow: auto;
     font-family: Arial;
     margin-top: 85px;
-    
+
 }
 
 /* label{
@@ -39,68 +43,68 @@ margin: 0px;
     font-family: Arial;
 } */
 
-.cityCodeDiv{
-   position: relative;
+.cityCodeDiv {
+    position: relative;
 
-   height:100px;
-   width: 150px;
-   font-family: Arial;
-   top: -75px;
-   background-color: aqua;
-}
-
-p{
+    height: 100px;
+    width: 150px;
     font-family: Arial;
-}
-
-ol{
-    opacity: 75%;
-    font-size: x-large;
+    top: -75px;
     
 }
 
-ol:hover{
-    opacity: 100%;
-
-}
-
-
-
-h3{
+p {
     font-family: Arial;
 }
 
-#cityCodelabel{
+ol {
+    opacity: 75%;
+    font-size: large;
+    padding-right: 25px;
+    display: inline-block
+
+}
+
+ol:hover {
+    opacity: 100%;
+    background-color: aliceblue;
+    border-radius: 24%; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+
+}
+
+
+h3 {
+    font-family: Arial;
+}
+
+#cityCodelabel {
     position: relative;
     width: 20%;
 }
 
-.input-container{
+.input-container {
 
     width: 100%;
-
-
     display: inline-block;
 }
 
-#init-airport-form{
-    width: 25%;
-    float: left;
- 
-    margin: 4.16%;
-}
-
-#cityCodeLookup{
+#init-airport-form {
     width: 25%;
     float: left;
     margin: 4.16%;
 }
 
-#filter-by-airline{
+#cityCodeLookup {
+    width: 25%;
+    float: left;
+    margin: 4.16%;
+}
+
+#filter-by-airline {
 
     width: 25%;
     float: left;
-  
     margin: 4.16%;
 
     color: rgb(255, 255, 255);
@@ -109,18 +113,36 @@ h3{
     font-family: Arial;
 }
 
-#look-up-box{
-    width: 80%;
+#look-up-box {
+    width: 70%;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 3%;
+    padding-left: 12px;
 }
 
-#initial-input{
-    width: 80%;
+#initial-input {
+    width: 70%;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 3%;
+    padding-left: 37px;
+    
 }
 
+#airline-select{
+    height: 32px;
+    font-size: 16px;
+    
+}
 
+#initial-btn{
+    height: 33px;
+    
+    
+}
 
-
-
-
-
-
+#airportSubmit{
+    height: 33px;
+    
+}

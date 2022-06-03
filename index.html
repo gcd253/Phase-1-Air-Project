@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhAAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD///cAAPvzAADz4wAA4+cAAMPHAACBxwAA+IcAAPwPAAD+DwAA/A8AAPAPAADABwAAAeMAAJ/xAAD/+AAA//wAAA==" rel="icon" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
@@ -13,7 +15,7 @@
 <body>
 
 
-    <h1 id="mainHeader">Live Flight Tracker</h1>
+    <h1 id="mainHeader">Flight Finder</h1>
 
 
     <div class="input-container">
@@ -33,18 +35,21 @@
 
 
         <form id="filter-by-airline" action="/action_page.php">
+
             <label id="filter-text" for="">Filter search by airline</label>
             <select name="airlines" id="airline-select">
-                <!-- <optgroup label="Swedish Cars"> -->
-                <option id="aa-option" value="American Airlines">American Airlines</option>
-                <option id="dl-option" value="Delta Air lines">Delta Air lines</option>
-                <option id="ua-option" value="United Airlines">United Airlines</option>
-                <option id="dl-option" value="JetBlue Airways">JetBlue Airways</option>
-                <option id="aa-option" value="Alaska Airlines">Alaska Airlines</option>
-                <option id="so-option" value="Spirit Airlines">Spirit Airlines</option>
-                <option id="sw-option" value="Southwest Airlines">Southwest Airlines</option>
-                <option id="ha-option" value="Hawaiian Airlines">Hawaiian Airlines</option>
-                <!-- </optgroup> -->
+                <optgroup label="Domestic Airlines">
+                    <option  value="">--</option>
+                    <option id="aa-option" value="Alaska Airlines">Alaska Airlines</option>
+                    <option id="aa-option" value="American Airlines">American Airlines</option>
+                    <option id="dl-option" value="Delta Air lines">Delta Air lines</option>
+                    <option id="ha-option" value="Hawaiian Airlines">Hawaiian Airlines</option>
+                    <option id="ua-option" value="United Airlines">United Airlines</option>
+                    <option id="dl-option" value="JetBlue Airways">JetBlue Airways</option>
+                    <option id="so-option" value="Spirit Airlines">Spirit Airlines</option>
+                    <option id="sw-option" value="Southwest Airlines">Southwest Airlines</option>
+                    
+                    <!-- </optgroup> -->
                 <optgroup label="International Airlines">
                     <option id="aeroM-option" value="Aeromexico"> Aeromexico</option>
                     <option id="aNZ-option" value="Air New Zealand"> Air New Zealand</option>
@@ -73,12 +78,12 @@
                     <option id="ice-option" value="Icelandair">Icelandair</option>
             </select>
             <br><br>
-        
+
         </form>
 
 
     </div>
-    
+
     <div id="search-results-div"></div>
 
 
