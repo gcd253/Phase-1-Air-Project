@@ -68,13 +68,11 @@ function filterAirline() {
         return item.airlineName === selectAirline.value
      })]
      allFlightData = filtered
-<<<<<<< HEAD
      //console.log(allFlightData)
      
-=======
      console.log(allFlightData)
      alert('Feature not yet implemented!')
->>>>>>> main
+
 }
 
 // global variables
